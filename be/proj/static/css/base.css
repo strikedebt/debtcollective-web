@@ -2566,8 +2566,7 @@ p, .body-text {
   .header-links.scrolling {
     position: fixed;
     top: 0;
-    right: 0;
-    height: 32px; }
+    right: 0; }
     .header-links.scrolling .splash-square {
       height: 20px;
       width: 20px; }
@@ -2578,6 +2577,12 @@ p, .body-text {
     color: #cec7c9; }
     .header-links a.nav-link:hover {
       color: #f7f7ed; }
+
+.scrolling-only {
+  display: none; }
+
+.scrolling .scrolling-only {
+  display: inline; }
 
 .banner {
   z-index: 9999990;
@@ -2591,7 +2596,6 @@ p, .body-text {
     top: 32px; }
   .banner .text {
     background-color: rgba(63, 31, 48, 0.8);
-    height: 32px;
     text-align: center;
     margin: auto;
     padding: 5px; }

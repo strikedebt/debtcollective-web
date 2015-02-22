@@ -213,7 +213,6 @@ p, .body-text {
     position: fixed;
     top: 0;
     right: 0;
-    height: 32px;
     .splash-square {
       height: 20px;
       width: 20px;
@@ -231,9 +230,12 @@ p, .body-text {
     }
   }
 }
-
-
-$banner-height: 32px;
+.scrolling-only {
+  display: none;
+}
+.scrolling .scrolling-only {
+  display: inline;
+}
 .banner {
   //@include frame-transition();
   z-index: 9999990;
@@ -251,7 +253,6 @@ $banner-height: 32px;
 
   .text {
     background-color: rgba(63,31,48,.80);
-    height: $banner-height;
     text-align: center;
     margin: auto;
     padding: 5px;
