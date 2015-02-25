@@ -1,5 +1,5 @@
 
-@import "vendor/bootstrap.min.css";
+@import "vendor/bootstrap.min.scss";
 @import "includes/variables";
 @import "includes/mixins";
 @import "includes/css3-mixins";
@@ -231,7 +231,6 @@ p, .body-text {
     position: fixed;
     top: 0;
     right: 0;
-    height: 32px;
     .splash-square {
       height: 20px;
       width: 20px;
@@ -249,6 +248,12 @@ p, .body-text {
       color: $link-hover;
     }
   }
+}
+.scrolling-only {
+  display: none;
+}
+.scrolling .scrolling-only {
+  display: inline;
 }
 
 .forum-box {
@@ -276,7 +281,6 @@ $banner-height: 32px;
 
   .text {
     background-color: rgba(63,31,48,.80);
-    height: $banner-height;
     text-align: center;
     margin: auto;
     padding: 5px;
@@ -752,3 +756,4 @@ $counter-color: #001f28;
   padding: 5px;
 }
 @import "includes/responsive";
+@import "vendor/odometer-theme-car";

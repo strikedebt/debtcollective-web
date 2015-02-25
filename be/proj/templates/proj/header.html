@@ -1,4 +1,4 @@
- <div ng-class="{scrolling: yLoc >= 5}" class="header-links hidden-mobile">
+ <div ng-class="{scrolling: yLoc >= 5}" class="header-links">
 
     <div class="header-title">
       <h1>
@@ -6,17 +6,13 @@
         DEBT COLLECTIVE
       </h1>
     </div>
-<a class="nav-link" href="/">DEBT COLLECTIVE</a>
-&nbsp;&nbsp;  |  &nbsp;&nbsp;
-<a class="nav-link" href="/studentstrike">ACTION ALERT!</a>
+
+<a class="nav-link scrolling-only" href="/" du-scrollspy du-smooth-scroll>HOME</a>
+<span class="scrolling-only">&nbsp;&nbsp; |&nbsp;&nbsp;   </span>
+<a class="nav-link" href="/studentstrike" du-scrollspy>ACTION ALERT!</a>
 &nbsp;&nbsp; | &nbsp;&nbsp;
 <a class="nav-link" href="http://strategize.debtcollective.org">COMMUNITY</a>
 &nbsp;&nbsp; | &nbsp;&nbsp;
+<a class="nav-link" href="http://strategize.debtcollective.org" du-scrollspy>COMMUNITY</a>
 <a class="nav-link" href="/#signup" du-scrollspy>SIGN UP</a>
-</div>
-
-<div class="header-links mobile-only">
-<a class="nav-link" href="/">HOME</a>
-&nbsp;&nbsp;  |  &nbsp;&nbsp;
-<a du-scrollspy class="nav-link" href="/studentstrike">ACTION ALERT!</a>
 </div>
