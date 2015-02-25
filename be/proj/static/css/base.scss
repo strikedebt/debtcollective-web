@@ -2,6 +2,7 @@
 @import "vendor/bootstrap.min.scss";
 @import "includes/variables";
 @import "includes/mixins";
+@import "includes/css3-mixins";
 @import "includes/flex";
 @import "includes/buttons";
 
@@ -40,7 +41,7 @@ body {
 }
 
 .arrow-down-steep {
-  background-image: url(/static/img/bg_arrow-down-steep.png);
+  background-image: url(../img/bg_arrow-down-steep.png);
   background-position: center bottom;
   padding-bottom: 210px;
   background-color: $dark-background-color !important;
@@ -49,14 +50,16 @@ body {
   h2.first {
     margin-top: -20px !important;
   }
-
+  .row.light {
+    background-color: $light-background-color;
+  }
   img.full-width {
     width: 100%;
   }
 }
 
 .arrow-up {
-  background: transparent url(/static/img/bg_arrow-up.png) scroll no-repeat center top;
+  background: transparent url(../img/bg_arrow-up.png) scroll no-repeat center top;
   z-index: -5;
   position: relative;
   padding-bottom: 250px;
@@ -102,6 +105,11 @@ strong {
 .body-text {
   p { margin-bottom: 22px; }
 }
+
+hr {
+  margin: 15px;
+  border-top: 1px solid black;
+}
 p, .body-text {
   @extend %rale;
   margin: 0px auto;
@@ -118,6 +126,16 @@ p, .body-text {
     margin-top: 10px;
   }
 
+  &.spaced {
+    padding-bottom: 60px;
+    a {
+      h2 {
+        margin-bottom: 0px;
+      }
+      text-decoration: none !important;
+    }
+  }
+
   &.mono {
     h1, h2, h6, p {
       @extend %mono;
@@ -130,8 +148,8 @@ p, .body-text {
       text-transform: none;
     }
     p {
-      font-size: 13px;
-      line-height: 24px;
+      font-size: 15px;
+      line-height: 20px;
     }
   }
 
@@ -223,6 +241,7 @@ p, .body-text {
   }
 
   a.nav-link {
+    @extend %mono;
     letter-spacing: 3px;
     color: $link-color;
     &:hover {
@@ -236,6 +255,15 @@ p, .body-text {
 .scrolling .scrolling-only {
   display: inline;
 }
+
+.forum-box {
+  padding: 20px;
+  border: 1px solid $dark-background-color;
+  background-color: $light-background-color;
+  color: $light-text-color;
+}
+
+$banner-height: 32px;
 .banner {
   //@include frame-transition();
   z-index: 9999990;
@@ -263,12 +291,41 @@ p, .body-text {
   }
 }
 
+.triangle-topright {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 120px 120px 0;
+  border-color: transparent #ff0000 transparent transparent;
+}
+.action-banner {
+  float: right;
+  color: $dark-text-color;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+}
+.action-banner-text {
+  text-align: left;
+  position: absolute;
+  top: 10;
+  right: 0;
+  width: 80px;
+}
 
 h1 {
   @extend %mono;
   font-size: 26px;
   line-height: 30px;
   font-weight: 100;
+
+  &.emphasis {
+    font-family: "Cutive mono", serif !important;
+    font-size: 26px !important;
+    line-height: 30px !important;
+    font-weight: 100 !important;
+  }
 
   &.floating-section-title {
     text-align: center;
@@ -279,7 +336,7 @@ h1 {
     line-height: 24px;
   }
   a {
-    color: $dark-mauve !important;
+    color: $link-color !important;
     text-decoration: none;
   }
 }
@@ -292,6 +349,9 @@ h2 {
   text-align: center;
   margin-bottom: 22px;
   letter-spacing: 4.5px;
+  &.dark {
+    color: $dark-background-color;
+  }
 }
 
 
@@ -312,14 +372,13 @@ h4 {
 
 h5 {
   @extend %rale;
-  font-weight: bold;
   font-size: 16px;
   line-height: 24px;
   font-style: italic;
 }
 
 p.small {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .checkbox, h6 {
@@ -344,7 +403,7 @@ p.small {
 }
 
 .quote {
-  transform: translateY(-25%);
+  @include transform(translateY(-25%));
   top: 25%;
   position: absolute;
   padding: 2em;
@@ -352,6 +411,10 @@ p.small {
 
 .centered {
   text-align: center;
+}
+
+.justified {
+  text-align: justify;
 }
 
 .underline {
@@ -390,6 +453,74 @@ p.small {
 
 }
 
+/** TABS **/
+
+.tabs {
+  @include flexbox;
+
+  .single-tab {
+    @extend h2;
+    width: 50%;
+    background-color: $light-background-color;
+    color: $light-text-color;
+    padding: 10px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    text-transform: normal;
+    border-top: 1px solid $off-grey;
+    border-right: 1px solid $off-grey;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.white {
+      background-color: white;
+    }
+  }
+
+  .active {
+    border-bottom: 1px solid $off-grey;
+    background-color: #888 !important;
+
+    a {
+      color: $dark-text-color;
+      &:hover {
+        color: $light-text-color;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.paper {
+  padding: 0px;
+  background: white;
+  color: black;
+  margin: 30px;
+  border: 1px solid black;
+
+  .signatures {
+    font-size: 18px;
+    padding-top: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+}
+.paper-bottom-form {
+  border-top: 1px solid black;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+.letter-header {
+  width: 130px;
+  margin-left: 60px;
+  margin-bottom: 80px;
+  margin-top: 40px;
+}
+
+
 /** GENERAL **/
 .fixed {
   position: fixed;
@@ -407,12 +538,11 @@ p.small {
 .vertical-center {
     position: relative;
     top: 25%;
-    transform: translateY(-50%);
+    @include transform(translateY(-50%));
     margin: auto;
 }
 
 a {
-  text-decoration: none !important;
   color: #041a29;
   @include transition();
 
@@ -463,14 +593,14 @@ input, select {
   padding: 10px;
 }
 
-input[type="text"], input[type="email"], select {
+input[type="text"], input[type="email"], select, textarea {
   @extend %input;
   text-transform: uppercase;
   font-size: 16px;
   letter-spacing: 2px;
 }
 
-input {
+input, textarea {
   border: 1px solid $dark-red !important;
   color: $dark-text-color;
   background-color: $olive !important;
@@ -478,10 +608,10 @@ input {
 
 select {
   border: 1px solid $olive;
-  color: $olive;
+  color: $light-background-color;
   font-weight: bold;
   background-color: rgb(53, 58, 56) !important;
-  background-image: url(/static/img/select-righthand.png);
+  background-image: url(../img/select-righthand.png);
   background-repeat: no-repeat;
   background-position: right center;
 }
@@ -597,5 +727,33 @@ form {
 }
 
 
+.thankyou-background {
+  background: url(../img/blogbackground2.gif);
+  height: 100%;
+}
+
+$counter-color: #001f28;
+
+.counters {
+  @include flexbox;
+}
+.counter-box {
+  border: 1px solid $dark-background-color;
+  background-color: $light-background-color;
+  width: 50%;
+  margin: 5px;
+  img {
+    padding: 20px;
+  }
+}
+.counter-box-header {
+  background-color: $counter-color;
+}
+
+.ticker-amount {
+  color: white;
+  margin-top: 0px;
+  padding: 5px;
+}
 @import "includes/responsive";
 @import "vendor/odometer-theme-car";

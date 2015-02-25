@@ -13,7 +13,7 @@
 
 #resources {
   h6 {
-    color: #5d6961;
+    color: $light-text-color;
     text-align: center;
     padding-top: 30px;
   }
@@ -119,8 +119,16 @@
 .intro {
   padding: 45px 0px 30px 0px;
   text-align: center;
+  h1 { letter-spacing: -2px; }
   border-top: 1px solid black;
   border-bottom: 1px solid black
+}
+
+.intro-caption {
+  h2 {
+    margin-bottom: 0px;
+  }
+  margin: 30px 0px;
 }
 
 #scroll {
@@ -157,8 +165,7 @@
     position: fixed;
     opacity: .9;
     margin: auto;
-    transform: translateY(-25%);
-
+    @include transform(translateY(-25%));
     &:nth-child(19),
     &:nth-child(20),
     &:nth-child(21),
@@ -191,6 +198,9 @@
   height: 325px;
   z-index: 999999999;
   background-color: $map-background-color;
+  &.map-loading{
+    background: url(../img/mapbackground.png) center no-repeat;
+  }
 }
 
 .debt-total {
@@ -215,19 +225,19 @@
     display: none !important;
   }
   .counter-container {
-    bottom: -20px;
+    bottom: -27.5px;
     position: absolute;
     z-index: 99999;
     left: 50%;
-    transform: translateX(-50%);
+    @include transform(translateX(-50%));
     width: 384px;
   }
   .legend {
     position: absolute;
-    bottom: 40px;
+    bottom: 30px;
     left: 50%;
     z-index: 999;
-    transform: translateX(-50%);
+    @include transform(translateX(-50%));
   }
 }
 
@@ -266,7 +276,7 @@
   position: relative;
   border: 1px solid $light-background-color;
   border-radius: 2px;
-  background-image: url('../img/jodometer-background.jpg');
+  background-image: url('../img/jodometer-background2.png');
   background-repeat: repeat-x;
   width: 288px;
   margin: 0 auto;

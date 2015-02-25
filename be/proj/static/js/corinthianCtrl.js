@@ -13,7 +13,8 @@ app.controller('corinthianCtrl',
     $scope.debt = 354135;
     $scope.money = 24194;
 
-    $scope.selectedStriker = null;
+    $scope.showCorinthianLetter = true;
+    $scope.currentStriker = null;
     $scope.loading = true;
     $scope.corinthian = false;
     $scope.strikers = []
@@ -25,7 +26,7 @@ app.controller('corinthianCtrl',
         striker.first_name = striker.name.split(' ')[0].toLowerCase()
         $scope.strikers.push(striker)
       }
-      $scope.strikerChunks = $scope.strikers.chunk(4)
+      $scope.strikerChunks = $scope.strikers.chunk(5)
     });
 
     $scope.agreeButton = function () {
@@ -33,14 +34,22 @@ app.controller('corinthianCtrl',
     }
 
     $scope.showStriker = function (striker, $event) {
+      history.pushState(null, striker.name, "#" + striker.first_name)
       $scope.currentStriker = striker
-      $event.stopPropagation()
+      if ($event) $event.stopPropagation()
     }
 
     $scope.closeStriker = function ($event) {
       $scope.currentStriker = null
-      $event.stopPropagation()
+      if ($event) $event.stopPropagation()
     }
+
+    $window.addEventListener('popstate', function () {
+      if ($scope.currentStriker) {
+        $scope.closeStriker()
+        $scope.$digest()
+      }
+    })
 
     $scope.formVisible = function () { return true; }
 });

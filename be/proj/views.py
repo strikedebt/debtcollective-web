@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.http import HttpResponse, Http404
 from django.core.context_processors import csrf
+from django.views.decorators.csrf import csrf_exempt
 from django.db.models import Sum
 from django.views.decorators.csrf import ensure_csrf_cookie, csrf_exempt
 
@@ -10,6 +11,9 @@ from proj.utils import json_response, get_POST_data
 from proj.gather.models import Debt, UserProfile, Point
 
 import simplejson as json
+
+import settings
+import stripe
 
 @ensure_csrf_cookie
 def splash(request):
@@ -35,6 +39,27 @@ def nov_fourth(request):
 
 def thankyou(request):
   return render_to_response('proj/thankyou.html')
+
+def not_found(request):
+  return render_to_response('proj/404.html')
+
+@csrf_exempt
+def stripe_endpoint(request):
+  stripe.api_key = settings.STRIPE_KEY
+
+  if request.method == 'POST':
+    rq = get_POST_data(request)
+    try:
+      stripe.Charge.create(
+        amount=int(rq['amount']) * 100,
+        currency='usd',
+        source=rq['stripeToken']['id'],
+        description="donation"
+      )
+    except stripe.CardError, e:
+      pass
+
+  return json_response({'status': 'ok'}, 200)
 
 def login(request):
   """

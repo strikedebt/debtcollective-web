@@ -1,25 +1,29 @@
 <head>
   <!-- DC kit -->
+  <meta charset="UTF-8">
+<<<<<<< HEAD
   <link rel="stylesheet" href="/static/css/base.css" />
+=======
+  <link rel="stylesheet" href="/static/css/base.dist.css?v3af79aef" />
+>>>>>>> 1a5af8f225de92a57dec762685a2296c4ecfabce
   <link href='//fonts.googleapis.com/css?family=Cousine|Cutive+Mono|Raleway:700,300,100' rel='stylesheet' type='text/css'>
   <link rel="icon" type="image/png" href="/static/img/RedSquare_favicon.png">
-  <meta charset="UTF-8">
-  <title>The Debt Collective: Organize, Resist, Reimagine</title>
+  <title>The Debt Collective</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="We are debtors and allies organizing to renegotiate and resist our debts. Alone, our debts are a burden. Together, they make us powerful.">
   <meta name="keywords" content="Debt,Student loans,Everest,Corinthian,Student Debt,Medical Debt,Credit Card Debt,Mortgage Debt,Bankruptcy,Debt discharge,Debt cancellation,Erase my debt,Jubilee,Strike Debt,Confused about debt,Rolling Jubilee,Interest rates,Principle reduction,What happens if I don’t pay my debt?,Judgement Debt,Bad Credit,Credit Score,Credit Report,Credit Reporting Agencies,Can’t Pay My Debt,Debt strike,Debt union,Credit cards,Fair credit,Wages garnished,Consumer rights,Strike creditors,Debt refusal,Debt resistance">
 
-  <meta property="og:title" content="The Debt Collective: Organize, Resist" />
+  <meta property="og:title" content="The Debt Collective" />
   <meta property="og:type" content="article" />
-  <meta property="og:image" content="/static/img/socialmedia_reportersdescribe.png" />
+  <meta property="og:image" content="/static/img/strikers/striker_headerimage.gif" />
   <meta property="og:url" content="http://debtcollective.org" />
   <meta property="og:description" content="We are debtors and allies organizing to renegotiate and resist our debts. Alone, our debts are a burden. Together, they make us powerful." />
 
   <!-- for Twitter -->
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="The Debt Collective: Organize, Resist, Reimagine" />
+  <meta name="twitter:title" content="The Debt Collective" />
   <meta name="twitter:description" content="We are debtors and allies organizing to renegotiate and resist our debts. Alone, our debts are a burden. Together, they make us powerful." />
-  <meta name="twitter:image" content="/static/img/socialmedia_reportersdescribe.png" />
+  <meta name="twitter:image" content="/static/img/strikers/striker_headerimage.gif" />
 
 </head>
 <body scroll ng-app="myDebtIs">
@@ -71,20 +75,34 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 <!-- end facebook sdk -->
 
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 <!-- twitter widgets -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-    <script type="text/javascript">(function () { var e = document.createElement('script'); e.type = 'text/javascript'; e.async = true; e.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://btn.createsend1.com/js/sb.min.js?v=3'; e.className = 'createsend-script'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s); })();</script>
-    <!-- create send -->
+<!-- create send (campagin monitor) -->
+<script type="text/javascript">(function () { var e = document.createElement('script'); e.type = 'text/javascript'; e.async = true; e.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://btn.createsend1.com/js/sb.min.js?v=3'; e.className = 'createsend-script'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s); })();</script>
 
-  <!-- other -->
-  <script src="/static/js/vendor/tabletop.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/static/dist/dc.js?v274033c3"></script>
+  <!--
+  <script src="/static/vendor/angular.min.js"></script>
+  <script src="/static/vendor/angular-cookies.min.js"></script>
+  <script src="/static/vendor/angular-animate.min.js"></script>
+  <script src="/static/vendor/angular-scroll.min.js"></script>
+  <script src="/static/vendor/miso.ds.deps.min.0.2.2.js"></script>
+  <script src="/static/vendor/miso.ds.min.0.4.1.js"></script>
+  <script src="/static/vendor/d3.min.js"></script>
+  <script src="/static/vendor/checkout.js"></script>
+  <script src="/static/vendor/ui-bootstrap-custom-0.10.0.min.js"
+    type="text/javascript"></script>
+  <script src="/static/vendor/ui-bootstrap-custom-tpls-0.10.0.min.js"
+  type="text/javascript"></script>
 
-  <script src="/static/js/vendor/angular.min.js"></script>
-  <script src="/static/js/vendor/angular-cookies.min.js"></script>
-  <script src="/static/js/vendor/angular-animate.min.js"></script>
-  <script src="/static/js/vendor/angular-scroll.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+  <script src="/static/vendor/jquery.min.js" type="text/javascript"></script>
+  <script src="/static/vendor/jquery.jodometer.js" type="text/javascript"></script>
+
+  <script src="/static/vendor/ammap/ammap.js"></script>
+  <script src="/static/vendor/ammap/maps/js/worldHigh.js" type="text/javascript"></script>
+
+
   <script src="/static/js/debtis.js" type="text/javascript"></script>
   <script src="/static/js/util.js" type="text/javascript"></script>
   <script src="/static/js/directives.js" type="text/javascript"></script>
@@ -93,21 +111,11 @@
   <script src="/static/js/corinthianCtrl.js" type="text/javascript"></script>
   <script src="/static/js/splashCtrl.js" type="text/javascript"></script>
 
-  <script src="/static/directives/donateButton.js" type="text/javascript"></script>
+  <script src="/static/directives/fbButton.js" type="text/javascript"></script>
+  <script src="/static/directives/donateButton.js?v2" type="text/javascript"></script>
   <script src="/static/directives/formCtrl.js" type="text/javascript"></script>
-  <script src="https://checkout.stripe.com/checkout.js"></script>
 
-  <!-- angular-bootstrap -->
-  <script src="/static/js/vendor/ui-bootstrap-custom-0.10.0.min.js"
-    type="text/javascript"></script>
-  <script src="/static/js/vendor/ui-bootstrap-custom-tpls-0.10.0.min.js"
-  type="text/javascript"></script>
-
-  <!-- jquery -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
-  <script src="/static/js/vendor/jquery.jodometer.js" type="text/javascript"></script>
-  <!-- maps -->
-  <script src="/static/js/vendor/ammap/ammap.js"></script>
-  <script src="/static/js/vendor/ammap/maps/js/worldHigh.js" type="text/javascript"></script>
+  <script type="text/javascript" src="/static/js/vendor/jquery.jqgoogleforms.min.js"></script>
   <script src="/static/js/maps/debtMap.js" type="text/javascript"></script>
+  -->
 </body>

@@ -1,4 +1,4 @@
-app.controller('mapCtrl', function ($scope, $http, util_svc) {
+app.controller('mapCtrl', function ($scope, $rootScope, $http, util_svc) {
     var map = new AmCharts.AmMap();
 
     /************
@@ -35,7 +35,7 @@ app.controller('mapCtrl', function ($scope, $http, util_svc) {
     // get data
     var dataProvider = {
         map: "worldHigh",
-        zoomLevel: 2,
+        zoomLevel: 3,
         zoomLatitude: 39.096169,
         zoomLongitude: -98.198721
     };
@@ -54,12 +54,11 @@ app.controller('mapCtrl', function ($scope, $http, util_svc) {
 
         dataProvider['images'] = parsedImages;
         map.dataProvider = dataProvider;
+
         map.validateNow();
         map.write("mapdiv");
+        document.getElementById("mapdiv").classList.remove('map-loading');
 
-        setTimeout(function () {
-            map.zoomIn();
-        }, 1000)
     });
 
     var scale = d3.scale.linear()

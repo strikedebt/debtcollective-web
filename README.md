@@ -64,6 +64,11 @@ $ cd be/static/css
 $ sass --watch base.scss
 ```
 
+```
+$ cd be/proj
+$ grunt watch
+```
+
 ## Testing the app
 
 Create the postgresql user and databases debtis
@@ -84,4 +89,20 @@ $ python manage.py test
 Visit this in your browser:
 ```
 http://localhost:8000/generate_map_json/?password=MAGIC_PASSWORD
+```
+
+
+## Compiling JS assets
+
+When you change the JS files, please run grunt to update the minified file so when deployed, the CDN can grab the correct one.
+
+**Setup** **(only do once)**
+```
+npm install -g grunt-cli
+npm install
+```
+
+**Deploy**
+```
+grunt
 ```

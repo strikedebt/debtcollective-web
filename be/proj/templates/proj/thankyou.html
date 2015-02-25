@@ -2,8 +2,55 @@
 
 {% block body %}
 
-<div class="thankyou-background hidden-mobile" style="background: url(/static/img/thankyou.png); height: 100%;">
+{% include "proj/insideHeader.html" with title='YOU ARE A MEMBER' %}
+<div class="thankyou-background2">
+<div class="container inside-container">
+   <div class="wrapper arrow-down-steep">
+      <div class="row">
+            <h2>WELCOME TO THE DEBT COLLECTIVE</h2>
+          <div class="body-text justified">
+            <p>No one should have to go into debt for basic needs like housing, healthcare, and education. When the indebted join together they can build power to help create a just society.</p>
+            <p>Expect an e-mail confirmation! We will update members regularly on campaign developments and include ways to join and support the debt collectives.</p>
+          <hr>
+          </div>
+          <div class="body-text caption sub">
+          <p>Help spread the word, lend your voice over <fb-button class="big-link">facebook</fb-button> and <a href="http://twitter.com/intent/tweet?text=Support%20the%20organizing%20efforts%20of%20debtors%20challenging%20how%20we%20finance%20and%20access%20basic%20necessities%20debtcollective.org%20%23debtstrike" class="big-link" target="_blank">twitter</a>!</p>
+            <fb-button>
+              <img class="sm-button" src="/static/img/fb.gif">
+            </fb-button>
+            <a href="http://twitter.com/intent/tweet?text=Support%20the%20organizing%20efforts%20of%20debtors%20challenging%20how%20we%20finance%20and%20access%20basic%20necessities%20debtcollective.org%20%23debtstrike" target="_blank">
+              <img class="sm-button" src="/static/img/twitter.gif">
+            </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper dark">
+    <div class="wrapper transparent">
+      <div class="forum-box">
+        <h1>Fight Sallie Mae and Navient</h1>
+        <p>Inspired by the Corinthian student debt strike? Imagine what we could build if everyone with Sallie Mae and Navient loans joined forces. Together, we can create leverage and power over Sallie Mae and Navient to lower interest rates, reduce principals, and even eliminate student debt. Join the Sallie Mae/Navient collective to start planning the next strike.</p>
+        <a class="big-link" href="http://strategize.debtcollective.org/c/fight-sallie-mae-and-navient">Join the conversation >></a>
+      </div>
+      <div class="forum-box">
+      <h1>Blog</h1>
+        <p>Read the Debt Collective blog.  Get updates on our latest campaigns and learn more about how to join a collective or support one.</p>
+        <a class="big-link" href="http://strategize.debtcollective.org/c/from-the-blog">Join the conversation >></a>
+      </div>
+      <div class="forum-box">
+        <h1>Questions & Answers</h1>
+        <p>Share your knowledge with others or get your questions answered. Untangle the confusion about your debt and loans.</p>
+        <a class="big-link"  href="http://strategize.debtcollective.org/c/questions-answers"> Join the conversation >></a>
+      </div>
+
+      <div class="forum-box">
+        <h1>Corinthian Collective</h1>
+        <p>Learn more about the Corinthian Collective. Our first campaign aims to get the debts of all Corinthian students cancelled.  </p>
+        <a class="big-link" href="http://strategize.debtcollective.org/c/corinthian-collective"> Join the conversation >></a>
+      </div>
+    </div>
+  </div>
 </div>
-<img class="mobile-only" src="/static/img/thankyou.png" />
+
 
 {% endblock %}

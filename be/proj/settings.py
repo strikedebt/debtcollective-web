@@ -103,4 +103,5 @@ STATICFILES_DIRS = (
 
 # Misc.
 AUTH_PROFILE_MODULE = 'gather.UserProfile'
-MAP_PASSWORD = ''
+MAP_PASSWORD = os.environ.get('MAP_PASSWORD', '')
+STRIPE_KEY= os.environ.get('STRIPE_KEY','')

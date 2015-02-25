@@ -1715,16 +1715,90 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
   font-size: 14px;
   line-height: 16px; }
 
-.button-box .box-text, .tweet-box .box-text, .fb-box .box-text, .nav-footer, .splash .splash-footer, .debt-total, .testimonial-top, .carousel .content-overlay-box .person-info, .mono, p.mono h1, p.mono h2, p.mono .tabs .single-tab, .tabs p.mono .single-tab, p.mono form button[type=submit], form p.mono button[type=submit], p.mono h6, p.mono p, .body-text.mono h1, .body-text.mono h2, .body-text.mono .tabs .single-tab, .tabs .body-text.mono .single-tab, .body-text.mono form button[type=submit], form .body-text.mono button[type=submit], .body-text.mono h6, .body-text.mono p, h1, .top-quote h1 {
+.button-box .box-text, .nav-footer, .splash .splash-footer, .debt-total, .testimonial-top, .carousel .content-overlay-box .person-info, .mono, p.mono h1, p.mono h2, p.mono .tabs .single-tab, .tabs p.mono .single-tab, p.mono form button[type=submit], form p.mono button[type=submit], p.mono h6, p.mono p, .body-text.mono h1, .body-text.mono h2, .body-text.mono .tabs .single-tab, .tabs .body-text.mono .single-tab, .body-text.mono form button[type=submit], form .body-text.mono button[type=submit], .body-text.mono h6, .body-text.mono p, .header-links a.nav-link, h1, .top-quote h1 {
   font-family: "Cutive mono", serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 20px; }
 
-.btn, input[type="text"], input[type="email"], select, #resources li a, body, p, .body-text, h2, .tabs .single-tab, form button[type=submit], h3, h4, h5, .checkbox, h6, .dropdown-menu {
+.btn, input[type="text"], input[type="email"], select, textarea, #resources li a, body, p, .body-text, h2, .tabs .single-tab, form button[type=submit], h3, h4, h5, .checkbox, h6, .dropdown-menu {
   font-family: "Raleway", sans-serif; }
 
-.btn, input[type="text"], input[type="email"], select {
+/* -------------------------------------------------------------
+  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+
+  List of CSS3 Sass Mixins File to be @imported and @included as you need
+
+  The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+  ENDING css files
+
+  note: All CSS3 Properties are being supported by Safari 5
+  more info: http://www.findmebyip.com/litmus/#css3-properties
+
+  Mixins available:
+    -   css3-prefix             - arguments: Property, Value
+    -   background-gradient     - arguments: Start Color: #3C3C3C, End Color: #999999
+    -   background-horizontal   - arguments: Start Color: #3C3C3C, End Color: #999999
+    -   background-radial       - arguments: Start Color: #FFFFFF, Start position: 0%, End Color: #000000, End position: 100%
+    -   background-size         - arguments: Width: 100%, Height: 100%
+    -   background-opacity      - arguments: Color: #000, Opacity: .85
+    -   border-radius           - arguments: Radius: 5px
+    -   border-radius-separate  - arguments: Top Left: 5px, Top Right: 5px, Bottom Left: 5px, Bottom Right: 5px
+    -   box                     - arguments: Orientation: horizontal, Pack: center, Align: center
+    -   box-rgba                - arguments: R: 60, G: 3, B: 12, Opacity: 0.23, Color: #3C3C3C
+    -   box-shadow              - arguments: X: 2px, Y: 2px, Blur: 5px, Color: rgba(0,0,0,.4)
+    -   box-sizing              - arguments: Type: border-box
+    -   columns                 - arguments: Count: 3, Gap: 10
+    -   double-borders          - arguments: Color One: #3C3C3C, Color Two: #999999, Radius: 0
+    -   flex                    - arguments: Value: 1
+    -   flip                    - arguments: ScaleX: -1
+    -   font-face               - arguments: Font Family: myFont, Eot File Src: myFont.eot, Woff File Src: myFont.woff, Ttf File Src: myFont.ttf
+    -   opacity                 - arguments: Opacity: 0.5
+    -   outline radius          - arguments: Radius: 5px
+    -   resize                  - arguments: Direction: both
+    -   rotate                  - arguments: Degree: 0, M11: 0, M12: 0, M21: 0, M22: 0
+    CSS Matrix Rotation Calculator http://www.boogdesign.com/examples/transforms/matrix-calculator.html
+    -   text-shadow             - arguments: X: 2px, Y: 2px, Blur: 5px, Color: rgba(0,0,0,.4)
+    -   transform               - arguments: Parameters: null
+    -   transform-style         - arguments: Style: preserve-3d
+    -   transition              - Default arguments: What: all, Length: 1s, Easing: ease-in-out
+    -                            - Examples: @include transition (all 2s ease-in-out);
+    -                                        @include transition (opacity 1s ease-in 2s, width 2s ease-out);
+    -   triple-borders          - arguments: Color One: #3C3C3C, Color Two: #999999, Color Three: #000000, Radius: 0
+    -   keyframes               - arguments: Animation name
+                                - content:   Animation css
+    -   animation               - arguments: name duration timing-function delay iteration-count direction fill-mode play-state
+                                             (http://www.w3schools.com/cssref/css3_pr_animation.asp)
+
+------------------------------------------------------------- */
+/* ADDS A BROWSER PREFIX TO THE PROPERTY */
+/* BACKGROUND GRADIENT */
+/* BACKGROUND HORIZONTAL */
+/* BACKGROUND RADIAL */
+/* BACKGROUND SIZE */
+/* BACKGROUND COLOR OPACITY */
+/* BORDER RADIUS */
+/* BOX */
+/* BOX RGBA */
+/* BOX SHADOW */
+/* BOX SIZING */
+/* COLUMNS */
+/* DOUBLE BORDERS */
+/* FLEX */
+/* FLIP */
+/* FONT FACE */
+/* OPACITY */
+/* OUTLINE RADIUS */
+/* RESIZE */
+/* ROTATE*/
+/* TEXT SHADOW */
+/* TRANSFORM  */
+/* TRANSFORM STYLE */
+/* TRIPLE BORDERS */
+/* KEYFRAMES */
+/* ANIMATION */
+.btn, input[type="text"], input[type="email"], select, textarea {
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -ms-transition: all 0.25s ease-in-out;
@@ -1737,7 +1811,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
   width: 100%;
   border: 0;
   text-decoration: none; }
-  .btn:focus, input[type="text"]:focus, input[type="email"]:focus, select:focus {
+  .btn:focus, input[type="text"]:focus, input[type="email"]:focus, select:focus, textarea:focus {
     outline: 0px;
     outline-offset: 0px; }
 
@@ -1765,9 +1839,10 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 .sm-button {
   width: 45px;
   padding: 5px;
-  vertical-align: initial; }
+  vertical-align: initial;
+  text-decoration: none !important; }
   .sm-button:hover {
-    background-color: #39413f; }
+    background-color: #e9e4d1; }
 
 .donate-buttons {
   display: -webkit-box;
@@ -1783,8 +1858,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
   .donate-buttons .donate-button {
     padding: 15px 15px 0px 15px; }
 
-.sm-buttons-right {
-  float: right;
+.sm-buttons, .sm-buttons-left, .sm-buttons-right {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -1796,6 +1870,13 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column; }
+
+.sm-buttons-left {
+  float: left;
+  padding-right: 10px; }
+
+.sm-buttons-right {
+  float: right; }
 
 .btn {
   min-width: 150px;
@@ -1829,32 +1910,18 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
   justify-content: space-around;
   margin: 50px 0px; }
 
-.button-box, .tweet-box, .fb-box {
+.button-box {
   margin: 15px;
   background: transparent;
   width: 100%; }
-  .button-box .box-text, .tweet-box .box-text, .fb-box .box-text {
+  .button-box .box-text {
     color: #f1eee2;
     width: 100%;
     letter-spacing: 0px;
     padding: 15px;
     margin-bottom: 0px; }
-  .button-box:hover, .tweet-box:hover, .fb-box:hover {
+  .button-box:hover {
     cursor: pointer; }
-
-.tweet-box, .fb-box {
-  width: 350px;
-  background-image: url(/static/img/02-2015_sm-norm-promo.gif);
-  background-repeat: no-repeat;
-  background-position: left; }
-  .tweet-box:hover, .fb-box:hover {
-    background-image: url(/static/img/02-2015_sm-promo.gif); }
-
-.fb-box {
-  background-image: url(/static/img/02-2015_tw-norm-promo.png);
-  padding: 10px; }
-  .fb-box:hover {
-    background-image: url(/static/img/02-2015_tw-overstate-promo.png); }
 
 /* SQUARED THREE */
 .checkbox {
@@ -1931,7 +1998,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
   padding: 10px; }
 
 #resources h6 {
-  color: #5d6961;
+  color: #39413f;
   text-align: center;
   padding-top: 30px; }
 #resources li {
@@ -2014,6 +2081,13 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
   text-align: center;
   border-top: 1px solid black;
   border-bottom: 1px solid black; }
+  .intro h1 {
+    letter-spacing: -2px; }
+
+.intro-caption {
+  margin: 30px 0px; }
+  .intro-caption h2, .intro-caption .tabs .single-tab, .tabs .intro-caption .single-tab, .intro-caption form button[type=submit], form .intro-caption button[type=submit] {
+    margin-bottom: 0px; }
 
 #scroll.mainstate .social-media {
   opacity: 0; }
@@ -2040,6 +2114,11 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
     position: fixed;
     opacity: .9;
     margin: auto;
+    -webkit-transform: translateY(-25%);
+    -khtml-transform: translateY(-25%);
+    -moz-transform: translateY(-25%);
+    -ms-transform: translateY(-25%);
+    -o-transform: translateY(-25%);
     transform: translateY(-25%); }
     .images .pane:nth-child(19), .images .pane:nth-child(20), .images .pane:nth-child(21), .images .pane:nth-child(22) {
       border-bottom: #333 1px solid; }
@@ -2069,6 +2148,8 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
   height: 325px;
   z-index: 999999999;
   background-color: #c4c2b2; }
+  #mapdiv.map-loading {
+    background: url(../img/mapbackground.png) center no-repeat; }
 
 .debt-total {
   text-align: center;
@@ -2088,17 +2169,27 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
   .map-container a {
     display: none !important; }
   .map-container .counter-container {
-    bottom: -20px;
+    bottom: -27.5px;
     position: absolute;
     z-index: 99999;
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -khtml-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
     transform: translateX(-50%);
     width: 384px; }
   .map-container .legend {
     position: absolute;
-    bottom: 40px;
+    bottom: 30px;
     left: 50%;
     z-index: 999;
+    -webkit-transform: translateX(-50%);
+    -khtml-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
     transform: translateX(-50%); }
 
 .splash-bottom-quote {
@@ -2125,7 +2216,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
   position: relative;
   border: 1px solid #f1eee2;
   border-radius: 2px;
-  background-image: url("../img/jodometer-background.jpg");
+  background-image: url("../img/jodometer-background2.png");
   background-repeat: repeat-x;
   width: 288px;
   margin: 0 auto; }
@@ -2163,30 +2254,6 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
   letter-spacing: 2px;
   padding: 20px 12px 0px 12px; }
 
-.tabs {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex; }
-  .tabs .single-tab {
-    width: 50%;
-    font-size: 32px;
-    padding: 10px;
-    margin-top: 0px !important;
-    text-transform: normal; }
-  .tabs .front {
-    border-top: 1px solid #39413f;
-    border-right: 1px solid #39413f; }
-  .tabs .back {
-    border-bottom: 1px solid #39413f;
-    background-color: #888; }
-    .tabs .back a {
-      color: #f1eee2; }
-      .tabs .back a:hover {
-        color: #39413f;
-        cursor: pointer; }
-
 .student-form .close-button {
   display: none !important; }
 
@@ -2223,27 +2290,6 @@ hr {
   -moz-justify-content: space-around;
   justify-content: space-around;
   padding-bottom: 18px; }
-
-.paper {
-  padding: 0px;
-  margin-top: 30px;
-  background: white;
-  color: black; }
-  .paper .signatures {
-    font-weight: 700px;
-    font-size: 18px;
-    text-transform: uppercase; }
-  .paper .bottom-form {
-    padding-top: 30px;
-    border-top: 1px solid black;
-    background-color: white;
-    padding-bottom: 30px; }
-
-.letter-header {
-  width: 130px;
-  margin-left: 60px;
-  margin-bottom: 80px;
-  margin-top: 40px; }
 
 .inter-text {
   padding: 15px 0px; }
@@ -2353,9 +2399,11 @@ hr {
   padding: 10px; }
   .item:hover {
     cursor: pointer;
-    background-color: #cec7c9; }
+    background-color: #fefefe; }
   .item .img {
     margin: auto; }
+    .item .img img {
+      width: 100%; }
   .item .info {
     margin-top: -25%;
     color: white;
@@ -2363,6 +2411,36 @@ hr {
     padding: 10px; }
     .item .info h3 {
       margin-top: 0px; }
+
+/** ccform **/
+.ss-q-title {
+  margin-top: 30px; }
+
+.ss-choice-item {
+  list-style: none !important; }
+
+.ss-form-question {
+  text-align: left; }
+
+.ss-q-title, .ss-choice-label {
+  font-size: 13px;
+  font-weight: bold; }
+  .ss-q-title.big, .ss-choice-label.big {
+    font-size: 28px;
+    line-height: 34px; }
+
+input[type="radio"] {
+  vertical-align: middle;
+  height: inherit; }
+
+label {
+  margin-bottom: 0px; }
+
+.ss-secondary-text {
+  text-transform: none;
+  font-size: 13px; }
+  .ss-secondary-text ul li {
+    padding: 10px 0px; }
 
 /** carousel **/
 .carousel .title {
@@ -2442,18 +2520,20 @@ body {
   margin-right: 0px; }
 
 .arrow-down-steep {
-  background-image: url(/static/img/bg_arrow-down-steep.png);
+  background-image: url(../img/bg_arrow-down-steep.png);
   background-position: center bottom;
   padding-bottom: 210px;
   background-color: #39413f !important;
   z-index: 0; }
   .arrow-down-steep h2.first, .arrow-down-steep .tabs .first.single-tab, .tabs .arrow-down-steep .first.single-tab, .arrow-down-steep form button.first[type=submit], form .arrow-down-steep button.first[type=submit] {
     margin-top: -20px !important; }
+  .arrow-down-steep .row.light {
+    background-color: #f1eee2; }
   .arrow-down-steep img.full-width {
     width: 100%; }
 
 .arrow-up {
-  background: transparent url(/static/img/bg_arrow-up.png) scroll no-repeat center top;
+  background: transparent url(../img/bg_arrow-up.png) scroll no-repeat center top;
   z-index: -5;
   position: relative;
   padding-bottom: 250px;
@@ -2488,6 +2568,10 @@ strong {
 .body-text p {
   margin-bottom: 22px; }
 
+hr {
+  margin: 15px;
+  border-top: 1px solid black; }
+
 p, .body-text {
   margin: 0px auto;
   font-size: 15.6px;
@@ -2499,6 +2583,12 @@ p, .body-text {
   p.small, .body-text.small {
     line-height: 20px;
     margin-top: 10px; }
+  p.spaced, .body-text.spaced {
+    padding-bottom: 60px; }
+    p.spaced a, .body-text.spaced a {
+      text-decoration: none !important; }
+      p.spaced a h2, p.spaced a .tabs .single-tab, .tabs p.spaced a .single-tab, p.spaced a form button[type=submit], form p.spaced a button[type=submit], .body-text.spaced a h2, .body-text.spaced a .tabs .single-tab, .tabs .body-text.spaced a .single-tab, .body-text.spaced a form button[type=submit], form .body-text.spaced a button[type=submit] {
+        margin-bottom: 0px; }
   p.mono h1, p.mono h2, p.mono .tabs .single-tab, .tabs p.mono .single-tab, p.mono form button[type=submit], form p.mono button[type=submit], p.mono h6, p.mono p, .body-text.mono h1, .body-text.mono h2, .body-text.mono .tabs .single-tab, .tabs .body-text.mono .single-tab, .body-text.mono form button[type=submit], form .body-text.mono button[type=submit], .body-text.mono h6, .body-text.mono p {
     font-family: 'Cousine', serif; }
   p.mono h6, .body-text.mono h6 {
@@ -2507,8 +2597,8 @@ p, .body-text {
     line-height: 24px;
     text-transform: none; }
   p.mono p, .body-text.mono p {
-    font-size: 13px;
-    line-height: 24px; }
+    font-size: 15px;
+    line-height: 20px; }
   p a, .body-text a {
     text-decoration: underline; }
   p ul, .body-text ul {
@@ -2545,7 +2635,7 @@ p, .body-text {
   width: 100%;
   z-index: 9999999;
   background-color: #39413f;
-  border-bottom: 1px solid #cec7c9; }
+  border-bottom: 1px solid #fefefe; }
   .header-links.inside-header {
     text-align: left;
     padding: 0px; }
@@ -2574,7 +2664,7 @@ p, .body-text {
       display: none; }
   .header-links a.nav-link {
     letter-spacing: 3px;
-    color: #cec7c9; }
+    color: #fefefe; }
     .header-links a.nav-link:hover {
       color: #f7f7ed; }
 
@@ -2583,6 +2673,12 @@ p, .body-text {
 
 .scrolling .scrolling-only {
   display: inline; }
+
+.forum-box {
+  padding: 20px;
+  border: 1px solid #39413f;
+  background-color: #f1eee2;
+  color: #39413f; }
 
 .banner {
   z-index: 9999990;
@@ -2602,17 +2698,43 @@ p, .body-text {
   .banner a {
     color: #ccaa2d; }
 
+.triangle-topright {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 120px 120px 0;
+  border-color: transparent #ff0000 transparent transparent; }
+
+.action-banner {
+  float: right;
+  color: #f1eee2;
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.action-banner-text {
+  text-align: left;
+  position: absolute;
+  top: 10;
+  right: 0;
+  width: 80px; }
+
 h1 {
   font-size: 26px;
   line-height: 30px;
   font-weight: 100; }
+  h1.emphasis {
+    font-family: "Cutive mono", serif !important;
+    font-size: 26px !important;
+    line-height: 30px !important;
+    font-weight: 100 !important; }
   h1.floating-section-title {
     text-align: center; }
   h1 .small {
     font-size: 16px;
     line-height: 24px; }
   h1 a {
-    color: #c4c2b2 !important;
+    color: #fefefe !important;
     text-decoration: none; }
 
 h2, .tabs .single-tab, form button[type=submit] {
@@ -2621,6 +2743,8 @@ h2, .tabs .single-tab, form button[type=submit] {
   text-align: center;
   margin-bottom: 22px;
   letter-spacing: 4.5px; }
+  h2.dark, .tabs .dark.single-tab, form button.dark[type=submit] {
+    color: #39413f; }
 
 h3 {
   font-size: 20px;
@@ -2634,13 +2758,12 @@ h4 {
   line-height: 24px; }
 
 h5 {
-  font-weight: bold;
   font-size: 16px;
   line-height: 24px;
   font-style: italic; }
 
 p.small {
-  font-size: 12px; }
+  font-size: 13px; }
 
 .checkbox, h6 {
   text-transform: uppercase;
@@ -2658,6 +2781,11 @@ p.small {
     color: #39413f; }
 
 .quote {
+  -webkit-transform: translateY(-25%);
+  -khtml-transform: translateY(-25%);
+  -moz-transform: translateY(-25%);
+  -ms-transform: translateY(-25%);
+  -o-transform: translateY(-25%);
   transform: translateY(-25%);
   top: 25%;
   position: absolute;
@@ -2665,6 +2793,9 @@ p.small {
 
 .centered {
   text-align: center; }
+
+.justified {
+  text-align: justify; }
 
 .underline {
   text-decoration: underline; }
@@ -2679,15 +2810,68 @@ p.small {
     color: #f1eee2 !important;
     background-color: #39413f; }
     .wrapper.dark h3 {
-      color: #cec7c9; }
+      color: #fefefe; }
     .wrapper.dark a {
-      color: #cec7c9; }
+      color: #fefefe; }
   .wrapper.light {
     color: #39413f;
     background-color: #f1eee2; }
     .wrapper.light h1 {
       color: #39413f;
       border-bottom: #39413f 1px solid; }
+
+/** TABS **/
+.tabs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .tabs .single-tab {
+    width: 50%;
+    background-color: #f1eee2;
+    color: #39413f;
+    padding: 10px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    text-transform: normal;
+    border-top: 1px solid #39413f;
+    border-right: 1px solid #39413f; }
+    .tabs .single-tab:hover {
+      cursor: pointer; }
+    .tabs .single-tab.white {
+      background-color: white; }
+  .tabs .active {
+    border-bottom: 1px solid #39413f;
+    background-color: #888 !important; }
+    .tabs .active a {
+      color: #f1eee2; }
+      .tabs .active a:hover {
+        color: #39413f;
+        cursor: pointer; }
+
+.paper {
+  padding: 0px;
+  background: white;
+  color: black;
+  margin: 30px;
+  border: 1px solid black; }
+  .paper .signatures {
+    font-size: 18px;
+    padding-top: 30px;
+    font-weight: bold;
+    text-transform: uppercase; }
+
+.paper-bottom-form {
+  border-top: 1px solid black;
+  padding-top: 30px;
+  padding-bottom: 60px; }
+
+.letter-header {
+  width: 130px;
+  margin-left: 60px;
+  margin-bottom: 80px;
+  margin-top: 40px; }
 
 /** GENERAL **/
 .fixed {
@@ -2703,11 +2887,15 @@ p.small {
 .vertical-center {
   position: relative;
   top: 25%;
+  -webkit-transform: translateY(-50%);
+  -khtml-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   margin: auto; }
 
 a {
-  text-decoration: none !important;
   color: #041a29;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
@@ -2751,22 +2939,22 @@ input, select {
   height: 44px;
   padding: 10px; }
 
-input[type="text"], input[type="email"], select {
+input[type="text"], input[type="email"], select, textarea {
   text-transform: uppercase;
   font-size: 16px;
   letter-spacing: 2px; }
 
-input {
+input, textarea {
   border: 1px solid #861800 !important;
   color: #f1eee2;
   background-color: rgba(2, 2, 2, 0.8) !important; }
 
 select {
   border: 1px solid rgba(2, 2, 2, 0.8);
-  color: rgba(2, 2, 2, 0.8);
+  color: #f1eee2;
   font-weight: bold;
   background-color: #353a38 !important;
-  background-image: url(/static/img/select-righthand.png);
+  background-image: url(../img/select-righthand.png);
   background-repeat: no-repeat;
   background-position: right center; }
 
@@ -2814,7 +3002,7 @@ form button[type=submit] {
     opacity: 1;
     list-style: none; }
     .dropdown-menu li a {
-      color: #cec7c9; }
+      color: #fefefe; }
     .dropdown-menu li.active {
       background-color: rgba(2, 2, 2, 0.8);
       color: #ccaa2d;
@@ -2852,20 +3040,58 @@ form button[type=submit] {
 
 .footer-copyright {
   font-size: 12px;
-  color: #cec7c9; }
+  color: #fefefe; }
 
 .visible {
   display: block; }
 
+.thankyou-background {
+  background: url(../img/blogbackground2.gif);
+  height: 100%; }
+
+.counters {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.counter-box {
+  border: 1px solid #39413f;
+  background-color: #f1eee2;
+  width: 50%;
+  margin: 5px; }
+  .counter-box img {
+    padding: 20px; }
+
+.counter-box-header {
+  background-color: #001f28; }
+
+.ticker-amount {
+  color: white;
+  margin-top: 0px;
+  padding: 5px; }
+
 .mobile-only {
   display: none; }
+
+.desktop-only {
+  display: none; }
+
+.striker-row.col-lg-2,
+.striker-row.col-sm-2,
+.striker-row.col-md-2 {
+  width: 19.666667%; }
 
 @media (min-width: 2500px) {
   .wrapper {
     max-width: 56.5%; }
 
   .body-text {
-    max-width: 39.4%; } }
+    max-width: 39.4%; }
+
+  .desktop-only {
+    display: block !important; } }
 @media (min-width: 1130px) and (max-width: 2500px) {
   .wrapper {
     max-width: 93.75%; }
@@ -2875,7 +3101,10 @@ form button[type=submit] {
 
   .carousel {
     max-width: 75%;
-    margin: auto; } }
+    margin: auto; }
+
+  .desktop-only {
+    display: block !important; } }
 @media (min-width: 768px) and (max-width: 1130px) {
   .wrapper {
     max-width: 100%; }
@@ -2899,6 +3128,15 @@ form button[type=submit] {
   .arrow-down-steep .row {
     background-color: #f1eee2; } }
 @media only screen and (max-width: 600px) {
+  .container {
+    padding: 0px; }
+
+  .dc-input {
+    margin: 5px; }
+
+  .paper {
+    margin: 0px; }
+
   .body-text.wide {
     max-width: 100%;
     min-width: 100%; }
@@ -2950,7 +3188,8 @@ form button[type=submit] {
     margin-bottom: 100px; }
 
   .btn.tiny {
-    padding: 15px 5px; }
+    padding: 15px 5px;
+    width: 100%; }
 
   .button, button {
     margin: 0px; }

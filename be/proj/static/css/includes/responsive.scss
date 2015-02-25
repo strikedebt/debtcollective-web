@@ -2,6 +2,15 @@
   display: none;
 }
 
+.desktop-only {
+  display: none;
+}
+
+.striker-row.col-lg-2,
+.striker-row.col-sm-2,
+.striker-row.col-md-2 {
+  width: 19.666667%;
+}
 
 @media (min-width: 2500px) {
   .wrapper {
@@ -9,6 +18,9 @@
   }
   .body-text {
     max-width: 39.4%;
+  }
+  .desktop-only {
+    display: block !important;
   }
 }
 @media (min-width: 1130px) and (max-width: 2500px) {
@@ -22,6 +34,9 @@
   .carousel {
     max-width: 75%;
     margin: auto;
+  }
+  .desktop-only {
+    display: block !important;
   }
 }
 
@@ -59,6 +74,15 @@
 }
 //phones
 @media only screen and (max-width: 600px) {
+  .container {
+    padding: 0px;
+  }
+  .dc-input {
+    margin: 5px;
+  }
+  .paper {
+    margin: 0px;
+  }
   .body-text.wide {
     max-width: 100%;
     min-width: 100%;
@@ -122,6 +146,7 @@
   }
   .btn.tiny {
     padding: 15px 5px;
+    width: 100%;
   }
   .button, button {
     margin: 0px;
